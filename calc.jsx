@@ -19,7 +19,7 @@ class Calc extends React.Component {
     options: {
       asslvl: "0.5",
       smeltlvl: "1",
-      beltlvl: "5.7",
+      beltlvl: "7.5",
       difficulty: "normal",
       alwaysShowDecimals: false
     },

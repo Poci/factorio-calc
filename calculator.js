@@ -48,7 +48,11 @@ App.Calculator = {
 		if (name == "iron-ore" || name == "copper-ore" || name == "stone" || name == "coal") {
 			rawData = {};
 			rawData.name = name;
-			rawData.energy_required = 1 / (name == "stone" ? 0.65 : 0.525);
+			if (window.CURRENT_LIB.startsWith("core-0-17")){
+				rawData.energy_required = 1 / 0.5;
+			} else {
+				rawData.energy_required = 1 / (name == "stone" ? 0.65 : 0.525);
+			}
 			rawData.category = "ore";
 			rawData.ingredients = [];
 		}

@@ -41,11 +41,18 @@ App.Options = class Options extends React.Component {
         <option key="13.33" value="13.33">Fast</option>,
         <option key="20.00" value="20.00">Express</option>
       ];
+      var newBeltOptionsnew = [
+        <option key="7.5" value="7.5">Basic</option>,
+        <option key="15" value="15">Fast</option>,
+        <option key="22.5" value="22.5">Express</option>
+      ];
 
       var beltOptions;
       if (window.CURRENT_LIB == "core-0-11-3" || window.CURRENT_LIB == "core-0-10-2" || window.CURRENT_LIB == "core-0-9-8") {
         beltOptions = oldBeltOptions;
-      } else {
+      } else if (window.CURRENT_LIB.startsWith("core-0-17")) {
+			  beltOptions = newBeltOptionsnew;
+	  } else {
         beltOptions = newBeltOptions;
       }
 
